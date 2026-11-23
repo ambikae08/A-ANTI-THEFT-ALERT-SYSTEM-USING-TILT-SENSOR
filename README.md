@@ -50,9 +50,34 @@ The board is programmable using the Arduino IDE (Integrated Development Environm
 •	Stop Simulation: Click "Stop Simulation" to end the simulation.
 
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
+## CIRCUIT DIAGRAM
+<img width="752" height="434" alt="image" src="https://github.com/user-attachments/assets/56a69d90-67da-4eb5-9bc3-b3c7e4a8c1af" />
 
 ## PROGRAM
+```
+int ledPin=13;
+int inPin=7;
+void setup()
+{
+ Serial.begin(9600);
+  pinMode(ledPin,OUTPUT);
+  pinMode(inPin,INPUT);
+}
+void loop()
+{
+  int val=digitalRead(inPin);
+  if(val==0)
+  {
+    digitalWrite(ledPin,HIGH);
+  }
+  else
+  {
+    digitalWrite(ledPin,LOW);
+  }
+}
+```
 ## OUTPUT
+<img width="753" height="431" alt="image" src="https://github.com/user-attachments/assets/73cea2d5-b7b4-4ea0-b7e1-382a9452d4cc" />
 
 
 ## Result: 
